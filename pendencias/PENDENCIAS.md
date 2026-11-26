@@ -36,17 +36,23 @@ comprovados com prints. O código de exemplo está em
 `Informacoes/Cap10_Flutter_API_REST_Projetos.zip` → `Projeto_A_API_REST` (a pasta
 `Informacoes/` só existe localmente, não vai para o GitHub).
 
-- [ ] Abrir `https://dummyjson.com/products?limit=12` no navegador e localizar a lista
+- [x] Abrir `https://dummyjson.com/products?limit=12` no navegador e localizar a lista
       `products` e os campos `id`, `title` e `price`.
-- [ ] Criar um projeto separado (fora deste repositório) com o Projeto A, executar o
+- [x] Criar um projeto separado (fora deste repositório) com o Projeto A, executar o
       catálogo e abrir a tela de detalhes de um produto.
-- [ ] Trocar `limit=12` por `limit=5` em `produtos_api_service.dart`, atualizar e conferir
+- [x] Trocar `limit=12` por `limit=5` em `produtos_api_service.dart`, atualizar e conferir
       que aparecem **5 produtos**. → **Print 1**
-- [ ] Desligar a internet, pedir nova consulta e ver a mensagem de erro. → **Print 2**
-- [ ] Religar a internet e testar o botão **Tentar novamente**.
-- [ ] Salvar os prints com estes nomes exatos (o README já aponta para eles):
+- [x] Desligar a internet, pedir nova consulta e ver a mensagem de erro. → **Print 2**
+- [x] Religar a internet e testar o botão **Tentar novamente**.
+- [x] Salvar os prints com estes nomes exatos (o README já aponta para eles):
   - `docs/prints/pratica_cinco_produtos.png`
   - `docs/prints/pratica_erro_conexao.png`
+
+> **Feito em 26/11/2026.** O Projeto A está em `C:\Users\Diego\dev\cap10_projeto_a`, já com
+> `limit=5` e a permissão de INTERNET no Android. Rodou na versão **Web (Edge)**, porque ainda
+> não havia Android SDK. A falta de conexão foi simulada só no navegador (modo offline), sem
+> derrubar a rede do PC. Se quiserem prints do Android, basta rodar esse projeto no emulador
+> depois da seção 1 e substituir os dois arquivos.
 
 ## 3. Testes de aceitação T1 a T7 (no Android)
 
