@@ -3,31 +3,39 @@
 **Prazo de entrega:** 27/11/2026, às 23h59 (enviar na tarefa da disciplina).
 
 O código do app já está pronto: `flutter analyze` não aponta problemas e os 23 testes
-automatizados passam. O que falta é **executar no Android**, **registrar as evidências** e
-**entregar**.
+automatizados passam. O ambiente Android já está pronto e o app já roda no emulador
+(seção 1). O que falta é **registrar as evidências** e **entregar**.
 
 ---
 
-## 1. Preparar o ambiente Android
+## 1. Preparar o ambiente Android ✅ (concluído em 26/11/2026)
 
-O PC onde o projeto foi feito **não tem o Android SDK**, então o app ainda não foi aberto
-em nenhum emulador ou aparelho.
+O app já foi compilado e aberto no emulador Android: o catálogo carregou os produtos
+da API normalmente.
 
-- [ ] Instalar o Android Studio (https://developer.android.com/studio) e, pelo SDK Manager,
-      instalar o Android SDK, as Platform-Tools e uma imagem de emulador.
-- [ ] Criar um emulador (Device Manager) **ou** ligar um celular com depuração USB ativada.
-- [ ] Colocar o Flutter no PATH (ele está em `C:\Users\Diego\dev\flutter\bin`) ou usar o
-      caminho completo nos comandos.
-- [ ] Rodar `flutter doctor --android-licenses` e aceitar as licenças.
-- [ ] Rodar `flutter doctor` e confirmar que **Android toolchain** aparece sem erro.
-- [ ] Conferir a versão: o projeto exige **Flutter 3.50 ou mais novo** (usa `package:material_ui`).
+- [x] Instalar o Android Studio (2026.2.2.10) e o Android SDK: Platform-Tools 37.0.3,
+      Emulator 37.3.10, Android 36, Build-Tools 36.0.0, NDK 28.2.13676358 e a imagem
+      `android-36 / google_apis / x86_64`. SDK em `C:\Users\Diego\AppData\Local\Android\Sdk`.
+- [x] Criar um emulador: AVD **`Pixel_API_36`** (Pixel 7, Android 16 / API 36, aceleração WHPX).
+- [x] Colocar o Flutter no PATH do usuário (`C:\Users\Diego\dev\flutter\bin`), junto com
+      `platform-tools`, `emulator` e `cmdline-tools\latest\bin`. Também foi definido `ANDROID_HOME`.
+      (Terminais/editores que já estavam abertos precisam ser reiniciados.)
+- [x] Rodar `flutter doctor --android-licenses` e aceitar as licenças.
+- [x] Rodar `flutter doctor`: **Android toolchain** aparece sem erro (Android SDK 36.0.0).
+      Os avisos de Chrome e Visual Studio só afetam web/desktop e podem ser ignorados.
+- [x] Conferir a versão: Flutter **3.50.0** (stable), que atende o mínimo de 3.50.
       Quem for rodar o projeto (incluindo outros integrantes) precisa de uma versão igual ou mais nova.
-- [ ] Na raiz do repositório:
-      ```bash
-      flutter pub get
-      flutter devices          # copiar o ID do Android
-      flutter run -d ID_DO_ANDROID
-      ```
+- [x] Na raiz do repositório: `flutter pub get`, `flutter devices` (ID `emulator-5554`) e
+      `flutter run -d emulator-5554`. O app abriu e o catálogo carregou.
+
+> **Observação:** o `sdkmanager` atual repassa os comandos para o novo "Android CLI", que
+> **não aceita `;`** nos nomes de pacote (use `/`, por exemplo `ndk/28.2.13676358`). Por isso o
+> Gradle não conseguiu baixar o NDK sozinho no primeiro build, e ele foi instalado manualmente.
+> Se outro integrante tiver o erro "sdkmanager did not install NDK", rode:
+> `sdkmanager "ndk/28.2.13676358"`.
+>
+> Para abrir o emulador depois: `emulator -avd Pixel_API_36` (ou pelo Device Manager do
+> Android Studio).
 
 ## 2. Prática guiada do Capítulo 10 (seções 1 a 9)
 
