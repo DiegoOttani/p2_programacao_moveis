@@ -12,7 +12,7 @@ ao reabrir o app (SharedPreferences).
 | Disciplina | Programação para Dispositivos Móveis — P2 de Flutter |
 | Integrantes | Diego Ventura Ottani · Rafael Nunes Villa Rubia · João Alex Garcia |
 | Repositório | https://github.com/DiegoOttani/p2_programacao_moveis |
-| Vídeo de demonstração | _(colar o link aqui)_ |
+| Vídeo de demonstração | https://drive.google.com/file/d/1sa1rPNNmJfzvAINe0kYe9sd-xpkBeLci/view?usp=sharing |
 
 ## Como executar no Android
 

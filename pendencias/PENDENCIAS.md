@@ -91,7 +91,7 @@ Executar **na ordem**, no app deste repositório, e preencher a tabela
 > limpos. Os resultados estão na tabela do README. Para cortar a rede foram usados
 > `adb shell svc wifi disable` e `adb shell svc data disable`.
 
-## 4. Vídeo (até 5 minutos) — gravado; falta só enviar e colar o link
+## 4. Vídeo (até 5 minutos) ✅ (enviado ao Google Drive em 27/11/2026)
 
 Mostrar, nesta ordem sugerida:
 
@@ -111,12 +111,14 @@ Mostrar, nesta ordem sugerida:
 > (a pasta também tem o áudio, as gravações de cada cena, os scripts e um `LEIA-ME.txt`).
 > **Assistir inteiro antes de enviar**, para conferir o áudio.
 
-- [ ] Enviar o vídeo (YouTube não listado, Google Drive etc.), **testar o link em uma aba anônima**
-      e colar o link na tabela "Identificação" do `README.md`.
+- [x] Enviar o vídeo e colar o link na tabela "Identificação" do `README.md`.
+      Google Drive: https://drive.google.com/file/d/1sa1rPNNmJfzvAINe0kYe9sd-xpkBeLci/view?usp=sharing
+- [ ] **Testar o link em uma aba anônima** (o compartilhamento precisa estar em
+      "Qualquer pessoa com o link pode ver").
 
-## 5. Finalizar o README (só falta o link do vídeo)
+## 5. Finalizar o README
 
-- [ ] Link do vídeo preenchido. → depende da seção 4.
+- [x] Link do vídeo preenchido (Google Drive).
 - [x] Os dois prints da prática guiada aparecendo corretamente no GitHub. Os caminhos no
       README batem com os arquivos (`docs/prints/pratica_cinco_produtos.png` e
       `docs/prints/pratica_erro_conexao.png`, com as mesmas maiúsculas e minúsculas), e os dois PNGs
