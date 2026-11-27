@@ -54,30 +54,34 @@ comprovados com prints. O código de exemplo está em
 > derrubar a rede do PC. Se quiserem prints do Android, basta rodar esse projeto no emulador
 > depois da seção 1 e substituir os dois arquivos.
 
-## 3. Testes de aceitação T1 a T7 (no Android)
+## 3. Testes de aceitação T1 a T7 (no Android) ✅ (concluído em 26/11/2026)
 
 Executar **na ordem**, no app deste repositório, e preencher a tabela
 "Testes de aceitação" do `README.md` (colunas **Resultado observado** e **Status**).
 
-- [ ] Antes de começar, **anotar os preços** dos dois produtos que serão usados e preencher
+- [x] Antes de começar, **anotar os preços** dos dois produtos que serão usados e preencher
       a linha "Preços anotados no catálogo" no README.
-- [ ] **T1** — Com internet, abrir o catálogo e selecionar um produto → a lista carrega e os
+- [x] **T1** — Com internet, abrir o catálogo e selecionar um produto → a lista carrega e os
       detalhes mostram o item escolhido.
-- [ ] **T2** — Sem rede, tocar em Atualizar → aparece a mensagem de erro. Religar a rede e tocar
+- [x] **T2** — Sem rede, tocar em Atualizar → aparece a mensagem de erro. Religar a rede e tocar
       em **Tentar novamente** → o catálogo volta.
-- [ ] **T3** — Adicionar o mesmo produto duas vezes (a 2ª vez avisa "já está na lista") → em
+- [x] **T3** — Adicionar o mesmo produto duas vezes (a 2ª vez avisa "já está na lista") → em
       Minha lista há **uma linha** com quantidade 1.
-- [ ] **T4** — Adicionar um 2º produto. Mudar o 1º para 3 unidades. Tocar em "Qtd" e tentar
+- [x] **T4** — Adicionar um 2º produto. Mudar o 1º para 3 unidades. Tocar em "Qtd" e tentar
       gravar **0** e depois **100** → ambos rejeitados, quantidade continua 3 e o subtotal = 3 × preço.
-- [ ] **T5** — Marcar o 1º como comprado e ligar o filtro em Configurações → o 1º some, o total
+- [x] **T5** — Marcar o 1º como comprado e ligar o filtro em Configurações → o 1º some, o total
       continua somando os dois. Desligar o filtro → o item volta marcado como comprado.
-- [ ] **T6** — Ligar o tema escuro e o filtro. **Fechar o app de verdade** (tirar dos recentes, sem
+- [x] **T6** — Ligar o tema escuro e o filtro. **Fechar o app de verdade** (tirar dos recentes, sem
       limpar dados) e abrir pelo ícone → tema e filtro voltam. Desligar o filtro → 1º item continua
       comprado com quantidade 3.
-- [ ] **T7** — Sem rede, abrir Minha lista, editar um item, tocar em excluir e **Cancelar** (item
+- [x] **T7** — Sem rede, abrir Minha lista, editar um item, tocar em excluir e **Cancelar** (item
       fica), depois excluir e **Confirmar** (item sai e o total é atualizado).
-- [ ] Conferir as contas: subtotal = preço × quantidade; total = soma de todos os itens.
-- [ ] Se algum teste falhar, anotar o que aconteceu no README e corrigir antes da entrega.
+- [x] Conferir as contas: subtotal = preço × quantidade; total = soma de todos os itens.
+- [x] Se algum teste falhar, anotar o que aconteceu no README e corrigir antes da entrega.
+
+> Todos os 7 testes passaram no emulador `Pixel_API_36`, com o APK release e partindo de dados
+> limpos. Os resultados estão na tabela do README. Para cortar a rede foram usados
+> `adb shell svc wifi disable` e `adb shell svc data disable`.
 
 ## 4. Vídeo (até 5 minutos)
 

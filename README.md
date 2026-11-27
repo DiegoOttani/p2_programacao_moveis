@@ -121,17 +121,24 @@ Passos realizados com o catálogo de exemplo do capítulo (Projeto A):
 
 ## Testes de aceitação (Android)
 
-Preços anotados no catálogo antes dos testes: produto 1 = US$ ____ · produto 2 = US$ ____
+Preços anotados no catálogo antes dos testes: produto 1 (Essence Mascara Lash Princess) = US$ 9,99 · produto 2 (Eyeshadow Palette with Mirror) = US$ 19,99
+
+Executados em 26/11/2026 no emulador Android (Pixel 7, Android 16 / API 36), com o APK release
+e partindo de dados limpos. A rede foi cortada desligando o Wi-Fi e os dados móveis do emulador.
 
 | Teste | O que fazer | Resultado esperado | Resultado observado | Status |
 |---|---|---|---|---|
-| T1 | Abrir o catálogo com internet e selecionar um produto. | A lista carrega e os detalhes mostram o item escolhido. | | |
-| T2 | Sem rede, forçar nova consulta. Religar e tocar em Tentar novamente. | A falha mostra mensagem e o catálogo volta a carregar. | | |
-| T3 | Adicionar o mesmo produto duas vezes e abrir Minha lista. | Uma única linha para o produto, com quantidade 1. | | |
-| T4 | Adicionar outro produto. Alterar o primeiro para 3. Tentar gravar 0 e 100. | Subtotal = 3 × preço. 0 e 100 rejeitados; quantidade 3 preservada. | | |
-| T5 | Marcar o primeiro como comprado. Ativar o filtro de pendentes. | O primeiro some; o total inclui os dois. Sem filtro, reaparece como comprado. | | |
-| T6 | Ativar tema escuro e filtro. Fechar e reabrir o app. | Tema e filtro retornam. Sem filtro, o primeiro segue comprado com quantidade 3. | | |
-| T7 | Abrir Minha lista sem rede. Editar um item, cancelar uma exclusão e confirmar outra. | Edição funciona offline. Cancelar mantém; confirmar remove e atualiza o total. | | |
+| T1 | Abrir o catálogo com internet e selecionar um produto. | A lista carrega e os detalhes mostram o item escolhido. | O catálogo carregou 12 produtos. Ao tocar no Essence Mascara Lash Princess, os detalhes mostraram imagem, título, US$ 9,99, código 1 e descrição. | Aprovado |
+| T2 | Sem rede, forçar nova consulta. Religar e tocar em Tentar novamente. | A falha mostra mensagem e o catálogo volta a carregar. | Sem rede, Atualizar mostrou "Não foi possível consultar o catálogo." e o botão Tentar novamente. Com a rede de volta, o botão recarregou o catálogo. | Aprovado |
+| T3 | Adicionar o mesmo produto duas vezes e abrir Minha lista. | Uma única linha para o produto, com quantidade 1. | A 1ª vez adicionou; a 2ª avisou "já está na lista. O item existente foi mantido." Minha lista: uma linha, Qtd: 1, subtotal US$ 9,99. | Aprovado |
+| T4 | Adicionar outro produto. Alterar o primeiro para 3. Tentar gravar 0 e 100. | Subtotal = 3 × preço. 0 e 100 rejeitados; quantidade 3 preservada. | Com Qtd: 3, o subtotal ficou US$ 29,97 (3 × 9,99). 0 e 100 foram recusados com "Informe um número inteiro de 1 a 99." e a quantidade ficou 3. Com o 2º produto, o total foi US$ 49,96. | Aprovado |
+| T5 | Marcar o primeiro como comprado. Ativar o filtro de pendentes. | O primeiro some; o total inclui os dois. Sem filtro, reaparece como comprado. | Com o filtro, só o 2º apareceu, com o aviso "(1 comprado(s) oculto(s))", e o total ficou US$ 49,96 ("2 itens, inclui ocultos"). Sem filtro, o 1º voltou como Comprado. | Aprovado |
+| T6 | Ativar tema escuro e filtro. Fechar e reabrir o app. | Tema e filtro retornam. Sem filtro, o primeiro segue comprado com quantidade 3. | O app foi tirado dos recentes (processo encerrado) e aberto pelo ícone. Tema escuro e filtro voltaram ligados. Sem filtro, o 1º estava Comprado com Qtd: 3. | Aprovado |
+| T7 | Abrir Minha lista sem rede. Editar um item, cancelar uma exclusão e confirmar outra. | Edição funciona offline. Cancelar mantém; confirmar remove e atualiza o total. | Sem rede, o 2º item foi para Qtd: 2 (subtotal US$ 39,98). Excluir → Cancelar manteve o item; Excluir → Excluir removeu, e o total foi para US$ 29,97 (1 item). | Aprovado |
+
+Conferência das contas: subtotal = preço × quantidade (9,99 × 3 = 29,97; 19,99 × 2 = 39,98) e
+total = soma de todos os itens, inclusive os comprados e os ocultos pelo filtro
+(29,97 + 19,99 = 49,96).
 
 Os mesmos cenários de T3–T7 também são cobertos por testes automatizados em `test/`
 (`flutter test`), executados com sucesso.
