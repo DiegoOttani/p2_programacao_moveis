@@ -128,7 +128,7 @@ e partindo de dados limpos. A rede foi cortada desligando o Wi-Fi e os dados mó
 
 | Teste | O que fazer | Resultado esperado | Resultado observado | Status |
 |---|---|---|---|---|
-| T1 | Abrir o catálogo com internet e selecionar um produto. | A lista carrega e os detalhes mostram o item escolhido. | O catálogo carregou 12 produtos. Ao tocar no Essence Mascara Lash Princess, os detalhes mostraram imagem, título, US$ 9,99, código 1 e descrição. | Aprovado |
+| T1 | Abrir o catálogo com internet e selecionar um produto. | A lista carrega e os detalhes mostram o item escolhido. | O catálogo carregou a lista de produtos com nome, preço e imagem. Ao tocar no Essence Mascara Lash Princess, os detalhes mostraram imagem, título, US$ 9,99, código 1 e descrição. | Aprovado |
 | T2 | Sem rede, forçar nova consulta. Religar e tocar em Tentar novamente. | A falha mostra mensagem e o catálogo volta a carregar. | Sem rede, Atualizar mostrou "Não foi possível consultar o catálogo." e o botão Tentar novamente. Com a rede de volta, o botão recarregou o catálogo. | Aprovado |
 | T3 | Adicionar o mesmo produto duas vezes e abrir Minha lista. | Uma única linha para o produto, com quantidade 1. | A 1ª vez adicionou; a 2ª avisou "já está na lista. O item existente foi mantido." Minha lista: uma linha, Qtd: 1, subtotal US$ 9,99. | Aprovado |
 | T4 | Adicionar outro produto. Alterar o primeiro para 3. Tentar gravar 0 e 100. | Subtotal = 3 × preço. 0 e 100 rejeitados; quantidade 3 preservada. | Com Qtd: 3, o subtotal ficou US$ 29,97 (3 × 9,99). 0 e 100 foram recusados com "Informe um número inteiro de 1 a 99." e a quantidade ficou 3. Com o 2º produto, o total foi US$ 49,96. | Aprovado |

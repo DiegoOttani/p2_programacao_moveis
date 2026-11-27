@@ -91,27 +91,47 @@ Executar **na ordem**, no app deste repositório, e preencher a tabela
 > limpos. Os resultados estão na tabela do README. Para cortar a rede foram usados
 > `adb shell svc wifi disable` e `adb shell svc data disable`.
 
-## 4. Vídeo (até 5 minutos)
+## 4. Vídeo (até 5 minutos) — gravado; falta só enviar e colar o link
 
 Mostrar, nesta ordem sugerida:
 
-- [ ] Catálogo carregando e a tela de detalhes de um produto.
-- [ ] Inclusão de um item na lista.
-- [ ] Tentativa de adicionar o mesmo item de novo (aviso e **ausência de duplicata**).
-- [ ] Edição do item (quantidade e marcar como comprado).
-- [ ] Alteração do tema e do filtro em Configurações.
-- [ ] Fechar e reabrir o app, mostrando tema, filtro e lista restaurados.
-- [ ] Uso da lista **sem conexão** (modo avião), editando um item.
+- [x] Catálogo carregando e a tela de detalhes de um produto.
+- [x] Inclusão de um item na lista.
+- [x] Tentativa de adicionar o mesmo item de novo (aviso e **ausência de duplicata**).
+- [x] Edição do item (quantidade e marcar como comprado).
+- [x] Alteração do tema e do filtro em Configurações.
+- [x] Fechar e reabrir o app, mostrando tema, filtro e lista restaurados.
+- [x] Uso da lista **sem conexão** (modo avião), editando um item.
+
+> **Gravado em 26/11/2026** no emulador `Pixel_API_36`, com o APK release e partindo de dados
+> limpos. Dura **3min39s**, tem narração com a voz "Microsoft Maria" do Windows e segue o
+> `pendencias/ROTEIRO_VIDEO.md`. Também mostra o 0 sendo recusado e a exclusão com
+> Cancelar/Confirmar sem conexão.
+> Arquivo: `C:\Users\Diego\Desktop\Video_P2_Minha_Lista_de_Compras\P2_Minha_Lista_de_Compras.mp4`
+> (a pasta também tem o áudio, as gravações de cada cena, os scripts e um `LEIA-ME.txt`).
+> **Assistir inteiro antes de enviar**, para conferir o áudio.
+
 - [ ] Enviar o vídeo (YouTube não listado, Google Drive etc.), **testar o link em uma aba anônima**
       e colar o link na tabela "Identificação" do `README.md`.
 
-## 5. Finalizar o README
+## 5. Finalizar o README (só falta o link do vídeo)
 
-- [ ] Link do vídeo preenchido.
-- [ ] Os dois prints da prática guiada aparecendo corretamente no GitHub.
-- [ ] Tabela T1–T7 com resultado observado e status de cada teste.
-- [ ] Preços anotados preenchidos.
-- [ ] Conferir o nome da disciplina na tabela de identificação.
+- [ ] Link do vídeo preenchido. → depende da seção 4.
+- [x] Os dois prints da prática guiada aparecendo corretamente no GitHub. Os caminhos no
+      README batem com os arquivos (`docs/prints/pratica_cinco_produtos.png` e
+      `docs/prints/pratica_erro_conexao.png`, com as mesmas maiúsculas e minúsculas), e os dois PNGs
+      já estão commitados. **Ainda não estão no GitHub**: os commits locais não foram
+      enviados. Depois do push (seção 6), abrir o README no GitHub e conferir as imagens.
+- [x] Tabela T1–T7 com resultado observado e status de cada teste (todos "Aprovado").
+- [x] Preços anotados preenchidos (US$ 9,99 e US$ 19,99).
+- [x] Conferir o nome da disciplina na tabela de identificação. Nem o enunciado
+      (`instrucoes.txt`) nem o roteiro em PDF citam o nome oficial, então ficou
+      "Programação para Dispositivos Móveis — P2 de Flutter". Se o nome no sistema da
+      faculdade for outro, ajustar.
+
+> **Ajuste feito em 26/11/2026:** o T1 dizia que o catálogo "carregou 12 produtos", mas o app
+> pede `limit=20` (`lib/services/produtos_api_service.dart`); 12 era o valor da prática guiada.
+> O texto foi trocado para não citar uma quantidade errada.
 
 ## 6. Entrega
 
